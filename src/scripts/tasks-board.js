@@ -1,5 +1,6 @@
-import { TasksList } from './tasks-list';
-import { ModalsProvider } from 'ui-modal';
+import { TasksList } from './tasks-list'
+import { modalProvider } from '../app';
+import { CreateListModal } from './create-list-modal';
 
 export class TasksBoard {
   constructor({ rootEl, lists = [] }) {
@@ -10,7 +11,7 @@ export class TasksBoard {
   }
 
   init() {
-    this.catchEvents();
+    this.bindEvents();
     this.render();
   }
 
@@ -24,32 +25,13 @@ export class TasksBoard {
     this.render();
   }
 
-  catchEvents() {
-    document.addEventListener("submit", (event) => {
-      event.preventDefault();
+  bindEvents() {
+    const addListButton = document.querySelector("[data-add-list-button]");
 
-      const modalID = event.target.closest("[data-modal]").dataset.dataModal;
-
-      if (modalID === this.id) {
-        const input = event.target.querySelector("[name=name]");
-
-        if (input?.value) {
-          this.addList({
-            name: input.value,
-          });
-
-          input.value = "";
-        }
-      }
+    addListButton.addEventListener('click', () => {
+      modalProvider.openModal(CreateListModal);
     });
 
-    document.addEventListener("click", (event) => {
-      const deleteButtonEl = event.target.closest("[data-delete-btn]");
-
-      if (deleteButtonEl) {
-        this.deleteList(deleteButtonEl.closest("[data-tasks-list]").dataset.taskList);
-      } 
-    });
   }
   
   

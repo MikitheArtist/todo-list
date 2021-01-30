@@ -12,11 +12,13 @@ const gutil = require('gulp-util');
 
 const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == "development";
 
-gulp.task("styles", function () {
-  return gulp.src("src/**/*.css")
+gulp.task('styles', function () {
+  return gulp.src('./src/app.scss')
     .pipe(gulpIf(isDevelopment, sourcemaps.init()))
+    .pipe(sass())
+    .pipe(rename('style.css'))
     .pipe(gulpIf(isDevelopment, sourcemaps.write()))
-    .pipe(gulp.dest("public"));
+    .pipe(gulp.dest('./public/styles'));
 });
 
 gulp.task("clean", function(){

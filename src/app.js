@@ -17,7 +17,7 @@ const tasksBoard = new TasksBoard({
   ]
 });
 
-const modalProvider = new ModalsProvider ({
+export const modalProvider = new ModalsProvider ({
 
 });
 

@@ -39,7 +39,7 @@ export class TasksList {
     document.addEventListener("submit", (event) => {
       event.preventDefault();
 
-      const listID = event.target.closest("[data-tasks-list]").dataset.tasksList;
+      const listID = event.target.closest("[data-tasks-list]")?.dataset?.tasksList;
 
       if (listID === this.id) {
         const input = event.target.querySelector("[name=name]");
