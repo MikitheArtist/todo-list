@@ -13,11 +13,10 @@ export class CreateListModal extends Modal {
     document.addEventListener("submit", (event) => {
       event.preventDefault();
 
-      const modalID = event.target.closest("[data-modal]").dataset.dataModal;
-
+      const modalID = event.target.closest("[data-modal]").dataset.modal;
+      console.log(modalID);
       if (modalID === this.id) {
         const input = event.target.querySelector("[name=name]");
-        console.log(event.target);
 
         if (input?.value) {
           this.addList({

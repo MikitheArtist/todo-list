@@ -9,6 +9,8 @@ const source = require('vinyl-source-stream');
 const buffer = require('vinyl-buffer');
 const uglify = require('gulp-uglify');
 const gutil = require('gulp-util');
+const sass = require('gulp-sass');
+const rename = require('gulp-rename');
 
 const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == "development";
 

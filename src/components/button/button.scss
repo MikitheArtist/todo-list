@@ -1,0 +1,15 @@
+.button {
+	border-radius: 6px;
+	width: 75px;
+	height: 35px;
+	opacity: 1;
+  font-size: 14px;
+  
+  
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    border-color: #86a8e7;
+    outline: none;
+  }
+}
