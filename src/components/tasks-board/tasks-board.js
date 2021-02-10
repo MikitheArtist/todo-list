@@ -1,6 +1,6 @@
-import { TasksList } from './tasks-list'
-import { modalProvider } from '../app';
-import { CreateListModal } from './create-list-modal';
+import { TasksList } from '../tasks-list/tasks-list';
+import { modalProvider } from '../../app';
+import { CreateListModal } from '../create-list-modal/create-list-modal';
 
 export class TasksBoard {
   constructor({ rootEl, lists = [] }) {

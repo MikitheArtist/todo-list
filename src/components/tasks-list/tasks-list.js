@@ -1,5 +1,5 @@
-import { generateID } from './helpers';
-import { Task } from "./task";
+import { generateID } from '../../assets/scripts/helpers';
+import { Task } from '../task/task';
 
 export class TasksList {
   constructor({ id = generateID(), name, tasks = [], onChange = () => {} }) {

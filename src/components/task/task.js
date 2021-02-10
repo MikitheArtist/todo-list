@@ -1,4 +1,4 @@
-import { generateID } from './helpers';
+import { generateID } from '../../assets/scripts/helpers';
 
 export class Task {
   constructor({ id = generateID(), name = '', isDone = false }) {

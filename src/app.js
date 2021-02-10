@@ -1,4 +1,4 @@
-import { TasksBoard } from "./scripts/tasks-board";
+import { TasksBoard } from './components/tasks-board/tasks-board';
 import { ModalsProvider } from 'ui-modal';
  
 

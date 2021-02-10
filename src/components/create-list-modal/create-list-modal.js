@@ -35,9 +35,9 @@ export class CreateListModal extends Modal {
             <h2>Добавить список</h2>
             <span data-action='cancel' class='close'>&times;</span>
           </div>
-          <form class='modal-form'>
+          <form>
             <input
-              class='modal-form__input'
+              class='form-input'
               name='name'
               placeholder='Имя списка...'
             />
