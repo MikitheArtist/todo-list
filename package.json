@@ -35,6 +35,7 @@
     "vinyl-source-stream": "^2.0.0"
   },
   "dependencies": {
+    "bootstrap": "^4.6.0",
     "ui-modal": "github:MikitheArtist/ui-modal"
   }
 }
