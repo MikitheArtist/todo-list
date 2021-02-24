@@ -1,0 +1,26 @@
+@import '../../../theme/variables';
+
+form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 8px 24px;
+  background: $color-6;
+
+  .form-input {
+    flex-grow: 1;
+    margin-right: 24px;
+    box-sizing: border-box;
+    background: $color-6;
+    border: none;
+    color: $color-5;
+    outline: none;
+  }
+}
+
+.modal-overlay {
+  z-index: 1;
+  .modal-content {
+    padding: 15px;
+  }
+}

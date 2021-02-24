@@ -1,0 +1,23 @@
+@import '../../../../theme/variables';
+
+.task {
+  display: flex;
+  align-items: center;
+  padding: 8px 24px;
+  font-size: $fs-1;
+  background: $color-2;
+
+  
+  &__checkbox {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+
+  &__name {
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+

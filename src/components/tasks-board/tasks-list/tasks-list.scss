@@ -1,0 +1,21 @@
+@import '../../../theme/variables';
+
+.tasks-list {
+	display: flex;
+	flex-direction: column;
+	max-width: 450px;
+	margin: auto;
+	border-radius: 8px;
+	overflow: hidden;
+  box-shadow: 0 0 1em $color-4;
+}
+
+.todo-list {
+	list-style-type: none;
+	width: 100%;
+  padding: 0;
+}
+
+.todo__list {
+	margin: 0;
+}
