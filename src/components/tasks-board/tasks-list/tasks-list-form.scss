@@ -5,20 +5,20 @@
 	align-items: center;
 	width: 100%;
 	padding: 8px 24px;
-  background: white;
+  background: $white;
   
   &__input {
     flex-grow: 1;
     margin-right: 24px;
     box-sizing: border-box;
-    background: white;
+    background: $white;
     border: none;
-    color: gray;
+    color:$gray-800;
     outline: none;
   }
 
   &__input:hover,
   &__input:focus {
-    border-bottom-color: $color-3;
+    border-bottom-color: $blue;
   }
 }

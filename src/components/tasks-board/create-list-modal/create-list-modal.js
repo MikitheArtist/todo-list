@@ -28,29 +28,29 @@ export class CreateListModal extends Modal {
 
   getHTML() {
     return `
-      <div data-modal=${this.id} class='modal-overlay'>
-        <div class='modal-content'>
-          <div class='modal-content__header'>
-            <h2>Добавить список</h2>
-            <span data-modal-close class='close'>&times;</span>
-          </div>
-          <form>
-            <input
-              class='form-input'
-              name='name'
-              placeholder='Имя списка...'
-            />
-          </form>
-          <div class='modal-content__footer'>
-              <button data-action='ok' class='btn btn-info' title=''>
-              Добавить
-              </button>
-              <button data-modal-close class='btn btn-warning' title='Отмена'>
-                Отмена
-              </button>
-            </div>
-        </div> 
-      </div> 
+    <div data-modal=${this.id} class='modal'>
+      <div class='modal-overlay'></div>
+      <div class='modal-content'>
+        <div class='modal-content__header'>
+          <h2>Добавить список</h2>
+          <span data-modal-close class='close'>&times;</span>
+        </div>
+        <form>
+          <input
+            class='form-input'
+            name='name'
+            placeholder='Имя списка...'
+          />
+        </form>
+        <div class='modal-content__footer'>
+          <button data-action='ok' class='btn btn-info' title=''>
+            Добавить
+          </button>
+          <button data-modal-close class='btn btn-warning' title='Отмена'>
+            Отмена
+          </button>
+      </div>    
+    </div> 
     `;
   }
 }
