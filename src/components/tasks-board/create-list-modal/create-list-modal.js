@@ -35,7 +35,7 @@ export class CreateListModal extends Modal {
           <h2>Добавить список</h2>
           <span data-modal-close class='close'>&times;</span>
         </div>
-        <form>
+        <form class='modal-form'>
           <input
             class='form-input'
             name='name'

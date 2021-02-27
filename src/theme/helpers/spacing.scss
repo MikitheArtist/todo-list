@@ -1,0 +1,6 @@
+$spacing: 10px;
+
+@function spacing($n) {
+  @return $n * $spacing;
+}
+

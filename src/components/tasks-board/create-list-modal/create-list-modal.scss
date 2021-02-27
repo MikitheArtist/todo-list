@@ -1,11 +1,17 @@
 @import '../../../theme/variables';
+@import '../../../theme/helpers/spacing';
 
-form {
+.modal-content {
+  padding: spacing(1);
+}
+
+.modal-form {
   display: flex;
   align-items: center;
   width: 100%;
   padding: 8px 24px;
   background: $white;
+  margin-bottom: spacing(2);
 
   .form-input {
     flex-grow: 1;
