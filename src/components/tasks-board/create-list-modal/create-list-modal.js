@@ -6,19 +6,20 @@ export class CreateListModal extends Modal {
     super(options);
     
     this.bindEvents();
+    console.log(this);
   }
 
   bindEvents() {
     document.addEventListener("submit", (event) => {
       event.preventDefault();
 
-      const modalID = event.target.closest("[data-modal]").dataset.modal;
+      const modalID = +event.target.closest("[data-modal]").dataset.modal;
       console.log(modalID);
       if (modalID === this.id) {
         const input = event.target.querySelector("[name=name]");
-
+        console.log(input);
         if (input?.value) {
-          this.addList({
+          this.resolveModal({
             name: input.value,
           });
         }
@@ -30,27 +31,28 @@ export class CreateListModal extends Modal {
     return `
     <div data-modal=${this.id} class='modal'>
       <div class='modal-overlay'></div>
-      <div class='modal-content'>
+      <form class='modal-content'>
         <div class='modal-content__header'>
           <h2>Добавить список</h2>
           <span data-modal-close class='close'>&times;</span>
         </div>
-        <form class='modal-form'>
+        <div class='modal-form'>
           <input
             class='form-input'
             name='name'
             placeholder='Имя списка...'
           />
-        </form>
+        </div>
         <div class='modal-content__footer'>
-          <button data-action='ok' class='btn btn-info' title=''>
+          <button data-add-list-button class='btn btn-info' title='Добавить список'>
             Добавить
           </button>
           <button data-modal-close class='btn btn-warning' title='Отмена'>
             Отмена
           </button>
-      </div>    
-    </div> 
+        </div>
+      </form> 
+    </div>
     `;
   }
 }

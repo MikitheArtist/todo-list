@@ -20,19 +20,27 @@ export class TasksBoard {
     this.render();
   }
 
-  deleteTask(listID) {
+  deleteList(listID) {
     this.lists = this.lists.filter(({ id }) => id !== listID);
     this.render();
   }
 
   bindEvents() {
-    const addListButton = document.querySelector("[data-add-list-button]");
+  
+    const addListButton = document.querySelector('[data-add-list-button]');
+    console.log(addListButton);
 
     addListButton.addEventListener('click', () => {
-      modalProvider.openModal(CreateListModal);
+      modalProvider.openModal(CreateListModal, {
+        onModalResolved: (list) => {
+          console.log(list);
+          this.addList(list);
+        }
+      });
     });
 
   }
+
   
   
   render() {

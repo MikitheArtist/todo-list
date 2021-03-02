@@ -1,6 +1,37 @@
-$spacing: 10px;
+$spacing: 8px;
 
 @function spacing($n) {
   @return $n * $spacing;
 }
+
+// @function spacing( $t: 1, $r: null, $b: null, $l: null) {
+//   @if ($t and $r and $b and $l) {
+    
+//     @return $t * $spacing,
+//             $r * $spacing,
+//             $b * $spacing,
+//             $l * $spacing;
+
+//   } @else if ($t and not $r and not $b and not $l) {
+
+//     @return  $t * $spacing,
+//              $t * $spacing,
+//              $t * $spacing,
+//              $t * $spacing;
+//   } @else if ($t and $r and $b and not $l) {
+//     @return margin-top = $t * $spacing;
+//     @return margin-right = $r * $spacing;
+//     @return margin-bottom = $b * $spacing;
+//     @return margin-left = $r * $spacing;
+
+//   } @else if ($t and $r and not $b and not $l) {
+
+//     @return margin-top = $t * $spacing;
+//     @return margin-right = $r * $spacing;
+//     @return margin-bottom = $b * $spacing;
+//     @return margin-left = $r * $spacing;
+
+//   } 
+  
+// }
 

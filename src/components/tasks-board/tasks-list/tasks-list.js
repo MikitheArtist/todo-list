@@ -74,7 +74,7 @@ export class TasksList {
         <div class="tasks-list-header">
           <h2 class="tasks-list-header__title">${this.name}</h2>
           <button
-            data-delete-btn
+            data-delete-list-button
             class="btn btn-dark"
             title="Удалить cписок"
           >
