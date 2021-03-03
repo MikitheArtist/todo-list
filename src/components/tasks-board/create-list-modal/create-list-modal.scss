@@ -2,7 +2,7 @@
 @import '../../../theme/helpers/spacing';
 
 .modal-content {
-  padding: spacing(1);
+  padding: spacing();
 }
 
 .modal-form {
@@ -11,7 +11,7 @@
   width: 100%;
   padding: 8px 24px;
   background: $white;
-  margin-bottom: spacing(2);
+  margin-bottom: spacing(3);
 
   .form-input {
     flex-grow: 1;
