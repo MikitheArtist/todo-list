@@ -26,9 +26,7 @@ export class TasksBoard {
   }
 
   bindEvents() {
-  
     const addListButton = document.querySelector('[data-add-list-button]');
-    console.log(addListButton);
 
     addListButton.addEventListener('click', () => {
       modalProvider.openModal(CreateListModal, {
@@ -39,10 +37,15 @@ export class TasksBoard {
       });
     });
 
+    document.addEventListener('click', (event) => {
+      const listID = event.target.closest('[data-delete-list-button]')?.dataset.deleteListButton;
+      
+      if (listID) {
+        this.deleteList(listID);
+      }  
+    });
   }
 
-  
-  
   render() {
     this.rootEl.innerHTML = this.lists.map((list) => list.getHTML()).join('');
   }
